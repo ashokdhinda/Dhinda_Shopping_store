@@ -1,4 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+:root {
+    font-family: "Urbanist", sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    --buttonColor: #2a2c30;
+    --secondaryColor: #4b4f56;
+    --borderColor: #e3eaf0;
+    --backgroundColor: #f7f7f7;
+    --backgroundSecondary: #fefefe;
+    --textColor: #1e1f23;
+    --anchorColor: #535bf2;
+    --main-color: #535bf2;
+    --supporting-color: #ebf3fe;
+    --glow-color: hsl(186, 91%, 4%);
+}
+
+html {
+    font-size: 62.5%;
+    color: var(--textColor);
+}
+
+/* have a look into body once after we done with rest of the styling  */
+body {
+    margin: 0 auto;
+    padding: 0 32px;
+    min-width: 320px;
+    background-color: var(--backgroundColor);
+}
+
+
+
+p,
+li,
+a,
+label {
+    font-size: 1.8rem;
+    letter-spacing: 0.1rem;
+    color: var(--para-color);
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #646cff;
+    text-decoration: none;
+
+    &:hover {
+        color: #535bf2;
+    }
+}
+
+
+/*! layout */
+.container {
+    max-width: 142rem;
+    margin: 0 auto;
+    padding: 9.6rem 2.4rem;
+}
+
+/***** Navbar Section *****/
+
+.top_txt {
+    background-color: var(--buttonColor);
+    color: var(--backgroundColor);
+
+    & .head_txt p {
+        font-size: 1.5rem;
+    }
+
+    & .sing_in_up {
+        display: flex;
+        gap: 3.2rem;
+    }
+}
+
+.section-navbar {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+        rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.section-navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8rem;
+    /* we override the main container padding property  */
+}
+
+.section-navbar img {
+    width: 25%;
+}
+
+.section-navbar .navbar ul {
+    display: flex;
+    gap: 3.2rem;
+    text-transform: capitalize;
+    align-items: center;
+
+    & li a {
+        color: var(--heading-color);
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        display: inline-block;
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: -0.3rem;
+            left: 0;
+            width: 0%;
+            border-bottom: 0.1rem solid var(--main-color);
+            transition: all 0.3s linear;
+        }
+    }
+
+    & li a:hover {
+        color: var(--main-color);
+    }
+
+    & li a:hover:after {
+        width: 100%;
+    }
+}
 
 /***** Navbar End Section *****/
 
