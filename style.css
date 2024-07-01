@@ -181,7 +181,6 @@ textarea:focus-visible {
     box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
         0px 0px 0.5em 0px var(--glow-color);
 }
-
 @keyframes toastAnimation {
     0% {
         transform: translateX(100%);
